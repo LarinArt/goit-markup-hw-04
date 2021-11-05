@@ -73,6 +73,38 @@ ul {
   align-items: center;
 }
 
+.contacts .item {
+  flex-wrap: wrap-reverse;
+}
+
+.mail-tel {
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  display: flex;
+  color: var(--secondary-text-color);
+}
+
+.mail-icon {
+  margin-right: 10px;
+}
+
+.tel-icon {
+  margin-right: 10px;
+}
+
+.mail-tel:hover,
+.contacts .link:hover,
+.contacts .link:focus {
+  color: var(--blue-color);
+  fill: currentColor;
+}
+
+.mail-icon,
+.tel-icon {
+  fill: currentColor;
+}
+
 /* Container */
 .container .pf-button {
   margin-top: 94px;
@@ -107,6 +139,22 @@ ul {
   color: var(--logo-black-color);
 }
 
+.main-background {
+  margin-left: auto;
+  margin-right: auto;
+  height: 600px;
+  max-width: 1600px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/main-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 /* Site nav */
 .site-nav {
   display: flex;
@@ -125,8 +173,6 @@ ul {
   color: var(--main-text-color);
 }
 
-.contacts .link:hover,
-.contacts .link:focus,
 .site-nav .pf,
 .site-nav .main,
 .logo-col,
@@ -147,7 +193,6 @@ ul {
 
 .contacts .link {
   text-decoration: none;
-  display: flex;
 
   font-weight: 500;
   font-size: 14px;
@@ -250,9 +295,7 @@ ul {
   justify-content: space-around;
 }
 
-.social-button {
-  width: 44px;
-  height: 44px;
+.social-li {
   border-radius: 50%;
   border: none;
   background-position: center;
@@ -261,13 +304,19 @@ ul {
   color: var(--icon-color);
 }
 
+.social-link {
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
 .social-icon {
-  width: 20px;
-  height: 20px;
   fill: currentColor;
 }
 
-.social-button:hover {
+.social-li:hover {
   background-color: var(--blue-color);
   color: var(--white-color);
 }
@@ -278,8 +327,6 @@ ul {
 }
 
 .clients-button {
-  width: 170px;
-  height: 92px;
   cursor: pointer;
   border: 1px solid var(--icon-color);
   background-color: var(--white-color);
@@ -296,7 +343,7 @@ ul {
 }
 
 .clients-button:hover {
-  color: #188ce8;
+  color: var(--hover-main-button);
   border-color: var(--blue-color);
 }
 
@@ -397,9 +444,8 @@ ul {
 }
 
 .dignity-icon {
+  background-position: center;
   margin: 25px 100px;
-  width: 70px;
-  height: 70px;
 }
 
 /* Примеры работ */
@@ -461,10 +507,15 @@ ul {
 
 /* Footer */
 .footer {
+  display: flex;
   font-style: normal;
   background-color: var(--footer-background-color);
   text-align: left;
   padding: 60px 0 60px 15px;
+}
+
+.footer .container {
+  display: flex;
 }
 
 .address-text .address-link {
@@ -498,4 +549,53 @@ ul {
 
 .footer .list {
   margin-top: 20px;
+}
+
+.footer-social {
+  margin-left: 70px;
+}
+
+.footer-header {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--white-color);
+}
+
+.footer-social-list {
+  display: flex;
+}
+
+.footer-li {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white-color);
+}
+
+.footer-li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-link {
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.footer-icon {
+  fill: currentColor;
+}
+
+.footer-li:hover {
+  background-color: var(--blue-color);
+  color: var(--white-color);
 }
