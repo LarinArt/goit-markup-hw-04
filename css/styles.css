@@ -74,35 +74,21 @@ ul {
 }
 
 .contacts .item {
-  flex-wrap: wrap-reverse;
-}
-
-.mail-tel {
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
   display: flex;
   color: var(--secondary-text-color);
 }
 
+.tel-icon,
 .mail-icon {
   margin-right: 10px;
+    fill: currentColor;
 }
 
-.tel-icon {
-  margin-right: 10px;
-}
 
-.mail-tel:hover,
 .contacts .link:hover,
 .contacts .link:focus {
   color: var(--blue-color);
-  fill: currentColor;
-}
-
-.mail-icon,
-.tel-icon {
-  fill: currentColor;
 }
 
 /* Container */
@@ -142,7 +128,6 @@ ul {
 .main-background {
   margin-left: auto;
   margin-right: auto;
-  height: 600px;
   max-width: 1600px;
   background-image: linear-gradient(
       to right,
@@ -192,8 +177,9 @@ ul {
 }
 
 .contacts .link {
+  display: flex;
   text-decoration: none;
-
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -266,6 +252,7 @@ ul {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  background-color: var(--white-color);
 }
 
 .team-padding {
@@ -295,28 +282,26 @@ ul {
   justify-content: space-around;
 }
 
-.social-li {
-  border-radius: 50%;
-  border: none;
-  background-position: center;
-  cursor: pointer;
-  background-color: var(--white-color);
+.social-li .social-link {
   color: var(--icon-color);
+  background-color: var(--white-color);
 }
 
 .social-link {
+  border-radius: 50%;
   width: 44px;
   height: 44px;
   align-items: center;
   justify-content: center;
   display: flex;
+  cursor: pointer;
 }
 
 .social-icon {
   fill: currentColor;
 }
 
-.social-li:hover {
+.social-link:hover {
   background-color: var(--blue-color);
   color: var(--white-color);
 }
@@ -326,23 +311,23 @@ ul {
   display: flex;
 }
 
-.clients-button {
+.clients-link {
+  display: flex;
+  width: 170px;
+  height: 92px;
   cursor: pointer;
   border: 1px solid var(--icon-color);
   background-color: var(--white-color);
-  box-sizing: border-box;
   border-radius: 4px;
   color: var(--icon-color);
 }
 
 .clients-icon {
   margin: 16px 32px;
-  width: 106px;
-  height: 60px;
   fill: currentColor;
 }
 
-.clients-button:hover {
+.clients-link:hover {
   color: var(--hover-main-button);
   border-color: var(--blue-color);
 }
@@ -420,6 +405,10 @@ ul {
   width: 270px;
 }
 
+.dignity-content {
+  margin-top: 30px;
+}
+
 .dignity .dignity-text {
   margin-bottom: 10px;
   font-weight: 700;
@@ -436,16 +425,10 @@ ul {
 }
 
 .dignity-background {
-  padding-bottom: 30px;
-  width: 270px;
-  height: 120px;
+  padding: 25px 0;
+  text-align: center;
   border-radius: 4px;
   background-color: var(--hover-secondary-button);
-}
-
-.dignity-icon {
-  background-position: center;
-  margin: 25px 100px;
 }
 
 /* Примеры работ */
@@ -569,33 +552,20 @@ ul {
   display: flex;
 }
 
-.footer-li {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--white-color);
-}
-
 .footer-li:not(:last-child) {
   margin-right: 10px;
 }
 
-.footer-link {
-  width: 44px;
-  height: 44px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
+.footer-li .social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white-color);
 }
 
 .footer-icon {
   fill: currentColor;
 }
 
-.footer-li:hover {
+.footer-li .social-link:hover {
   background-color: var(--blue-color);
   color: var(--white-color);
-}
+}*/
